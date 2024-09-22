@@ -1,155 +1,162 @@
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+// import MenuIcon from '@mui/icons-material/Menu'; // Uncomment if you want to use an icon
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Link from 'next/link';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   // Function to handle scroll and add sticky behavior
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(scrollTop > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     // Cleanup event listener on unmount
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  const drawerWidth = 240;
+  const navItems= [
+    {
+      navLink : "Home",
+      id:"/"
+    },{
+      navLink : "The Toulous",
+      id:"#toulous"
+    },
+    {
+      navLink : "Traditional Wedding",
+      id:"#Traditional"
+    },
+    {
+      navLink : "Marriage Religieux",
+      id:"/"
+    },
+    {
+      navLink : "Accommodations",
+      id:"/"
+    },
+    {
+      navLink : "RSVP",
+      id:"#rvsp"
+    },
+    {
+      navLink : "Photos",
+      id:"/"
+    }
+  ]
+  // const navItems = ['Home', 'The Toulous', 'Traditional Wedding','Mariage Religieux ','Accomodations','RSVP','Photos '];
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        <img className='w-[90px] rounded-full mx-auto' src="./assists/logo2.webp" alt="logpo" />
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item,index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item.navLink} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
   return (
-    <nav
+    <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white text-black shadow-md" : "bg-transparent text-white"
+        scrolled ? 'bg-white text-black shadow-md' : 'bg-transparent text-white'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            {/* Logo or brand */}
-            <div className="flex items-center">
-              <img
-                className="w-[60px] rounded-full"
-                src="./assists/logo2.webp"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <div className="hidden text-[18px] font-bold md:flex items-center space-x-4">
-            <Link href="/" className="hover:text-gray-600">
-              HOME
-            </Link>
-            <Link href="#toulous" className=" hover:text-pink-600">
-              The Toulous
-            </Link>
-            <Link href="#Traditional" className="hover:text-gray-600">
-              Traditional Wedding
-            </Link>
-            <Link href="#registry" className="hover:text-gray-600">
-              Mariage Religieux
-            </Link>
-            <Link href="#place" className="hover:text-gray-600">
-              Accomodations
-            </Link>
-            <Link href="#rvsp" className="hover:text-gray-600">
-              RSVP
-            </Link>
-            <Link href="#accommodations" className="hover:text-gray-600">
-              Photos
-            </Link>
-          </div>
-
-          <div className="flex md:hidden">
-            <button
-              onClick={toggleMenu}
-              type="button"
-              className="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-gray-600 hover:bg-gray-300 focus:outline-none"
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <AppBar
+          component="nav"
+          sx={{
+            backgroundColor: scrolled ? 'white' : 'transparent',
+            color: scrolled ? 'black' : 'white',
+            transition: 'background-color 0.3s ease-in-out',
+            boxShadow: scrolled ? '0px 4px 12px rgba(0, 0, 0, 0.1)' : 'none',
+          }}
+        >
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{
+                mr: 2,
+                display: { sm: 'none' },
+                color: scrolled ? 'black' : 'white', // Toggle color based on scroll
+              }}
             >
-              <span className="sr-only">Open menu</span>
-              {isOpen ? (
-                <svg
-                  className="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link href="/" className="hover:text-gray-600 block">
-              HOME
-            </Link>
-            <Link href="#people" className="hover:text-gray-600 block">
-              PEOPLE
-            </Link>
-            <Link href="#party" className="hover:text-gray-600 block">
-              PARTY
-            </Link>
-            <Link href="#registry" className="hover:text-gray-600 block">
-              REGISTRY
-            </Link>
-            <Link href="#place" className="hover:text-gray-600 block">
-              PLACE
-            </Link>
-            <Link href="#travel" className="hover:text-gray-600 block">
-              TRAVEL
-            </Link>
-            <Link href="#accommodations" className="hover:text-gray-600 block">
-              ACCOMMODATIONS
-            </Link>
-            <Link href="#rsvp" className="hover:text-gray-600 block">
-              RSVP
-            </Link>
-            <Link href="#photos" className="hover:text-gray-600 block">
-              PHOTOS
-            </Link>
-          </div>
-        </div>
-      )}
-    </nav>
+              {/* You can add a hamburger icon here like MenuIcon */}
+              <span>☰</span> {/* Placeholder for hamburger icon */}
+            </IconButton>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            >
+              <img className=' w-[70px] rounded-full pt-2' src="./assists/logo2.webp" alt="logpo" />
+            </Typography>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              {navItems.map((item,index) => (
+                <Button key={index} sx={{ color: scrolled ? '#000' : '#fff' }}>
+                  <Link href={item.id} >
+                  {item.navLink}
+                  </Link>
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
+        <nav>
+          <Drawer
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
+          >
+            {drawer}
+          </Drawer>
+        </nav>
+      </Box>
+    </div>
   );
 };
 

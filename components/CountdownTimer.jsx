@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import Countdown from "react-countdown";
 
 const CountdownTimer = () => {
+  const [isMounted, setIsMounted] = useState(false);
 
-    const [isMounted, setIsMounted] = useState(false);
-
-    useEffect(() => {
-      // Mark the component as mounted to ensure it only renders on the client
-      setIsMounted(true);
-    }, []);
+  useEffect(() => {
+    // Mark the component as mounted to ensure it only renders on the client
+    setIsMounted(true);
+  }, []);
 
   // Set the target date for the countdown
   const targetDate = new Date("2024-12-22T00:00:00");
@@ -21,9 +20,11 @@ const CountdownTimer = () => {
     } else {
       // Render the countdown
       return (
-        <div className="countdown flex justify-center justify-items-center items-center gap-x-10 ">
+        <div
+          className="countdown flex justify-center justify-items-center items-center lg:gap-x-10 gap-x-4 lg:text-[56px] text-[20px] font-[500] "
+        >
           <div className=" text-center">
-            <h2 >- {days}</h2>
+            <h2>- {days}</h2>
             <p>Days</p>
           </div>
           <div className=" text-center">
@@ -38,7 +39,6 @@ const CountdownTimer = () => {
             <h2>{seconds}</h2>
             <p>Seconds</p>
           </div>
-         
         </div>
       );
     }
@@ -47,7 +47,6 @@ const CountdownTimer = () => {
     // Prevent rendering during server-side rendering
     return null;
   }
-
 
   return (
     <div className="flex flex-col justify-center items-center text-white p-4">

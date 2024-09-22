@@ -15,11 +15,11 @@ const Rsvp = () => {
   return (
     <div id="rvsp" className=" bg-[#DCF4E6] py-12">
       <div className=" flex flex-col justify-center items-center">
-        <h1 className="text-[90px] text-[#f67e7d] font-GreatVibes">
+        <h1 className="lg:text-[90px] text-[50px] text-[#f67e7d] font-GreatVibes">
           Are you attending
         </h1>
       </div>
-      <div className="mx-auto py-16 rounded bg-white w-[40%]">
+      <div className="mx-auto py-16 rounded bg-white lg:w-[40%] w-[90%]">
         <form className="flex items-center flex-col gap-y-4" action="">
           <input
             type="text"
