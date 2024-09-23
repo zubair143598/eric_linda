@@ -19,7 +19,7 @@ const Rsvp = () => {
           Are you attending
         </h1>
       </div>
-      <div className="mx-auto border border-black   py-16 rounded bg-white lg:w-[40%] w-[90%]">
+      <div className="mx-auto transform hover:rotate-0 rotate-2 border border-black   py-16 rounded bg-white lg:w-[40%] w-[90%]">
         <form className="flex items-center flex-col gap-y-4" action="">
           <input
             type="text"
@@ -53,7 +53,7 @@ const Rsvp = () => {
           </div>
           <textarea className=" placeholder:px-6 border-gray-400 border w-[80%] h-12" name="Message" placeholder="Message" id=""></textarea>
 
-          <button className="transform hover:rotate-6 mt-5 bg-[#f67e7d] rounded-full text-white font-bold px-10 py-4" type="submit">I am Attending</button>
+          <button className="transform hover:-rotate-6 rotate-2 mt-5 bg-[#f67e7d] rounded-full text-white font-bold px-10 py-4" type="submit">I am Attending</button>
           
         </form>
       </div>

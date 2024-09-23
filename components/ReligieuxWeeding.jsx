@@ -8,7 +8,7 @@ const ReligieuxWeeding = () => {
           <img className="w-[80%]" src="./assists/relegix.jpg" alt="" />
         </div>
         <div className=" gap-y-6 flex Traditional py-8 flex-col justify-center items-center">
-          <div className="uppercase text-[#999999] text-center font-bold  text-[18px]">
+          <div className="uppercase text-white text-center font-bold  text-[18px]">
             <p>Join us to celebrate</p>
             <p>the wedding day of</p>
           </div>
@@ -20,11 +20,11 @@ const ReligieuxWeeding = () => {
           <div className="mt-[-40px]">
             <img
               className="w-[140px]"
-              src="./assists/vines_flower.png"
+              src="./assists/vines_flower_white-removebg.png"
               alt="viens_flower"
             />
           </div>
-          <div className=" uppercase space-y-4 text-[#999999] text-center">
+          <div className=" uppercase space-y-4 text-white text-center">
             <p className=" font-bold  text-[18px]">Which is celebration on</p>
             <h1 className=" text-[48px] font-serif font-300">
               Nov / 23 / 2024 
@@ -34,7 +34,7 @@ const ReligieuxWeeding = () => {
               in the afternoon
             </p>
           </div>
-          <div className="uppercase text-[#999999] text-center font-bold  text-[18px]">
+          <div className="uppercase text-white text-center font-bold  text-[18px]">
             <h5>
               A B C Church <br />
              in Yaounde, Cameroon
