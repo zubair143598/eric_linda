@@ -47,7 +47,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    border: solid 0.1px gray; /* Border color and width */
+    border: solid 0.1px white; /* Border color and width */
     transform: rotate(-1deg); /* Rotate the border to the left */
     z-index: -1; /* Put the rotated border behind the content */
   }
@@ -60,7 +60,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    border: solid 0.1px gray; /* Border color and width */
+    border: solid 0.1px white; /* Border color and width */
     transform: rotate(1deg); /* Rotate the border to the right */
     z-index: -2; /* Ensure this is behind the first rotated border */
   }
@@ -101,7 +101,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with 50% opacity */
     z-index: 1; /* Ensure the overlay is on top of the background */
   }
 

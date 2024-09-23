@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from "react";
+
 
 const TraditionalWedding = () => {
   return (
@@ -28,21 +30,24 @@ const TraditionalWedding = () => {
               alt="viens_flower"
             />
           </div>
-          <div className=" uppercase space-y-4 text-white text-center">
-            <p className=" font-bold  text-[18px]">Which is celebration on</p>
+          <div className="  space-y-4 text-white text-center">
+            <p className=" font-bold uppercase text-[18px]">Which is celebration on</p>
             <h1 className=" text-[48px] font-serif font-300">
-              Nov / 30 / 2024{" "}
+              23rd of Nov 2024{" "}
             </h1>
-            <p className="text-[18px] font-bold">
+            <p className="text-[18px] uppercase font-bold">
               Starting at 2:00 <br />
               in the afternoon
             </p>
           </div>
           <div className="uppercase text-white text-center font-bold  text-[18px]">
             <h5>
-              A B C Church <br />
+             
               in Fondjomekwet, Cameroon
             </h5>
+          </div>
+          <div>
+            <Link className="text-[18px] hover:text-black hover:bg-white uppercase font-bold text-white px-6 py-3 border" target="blank" href="https://maps.app.goo.gl/adTCHmSdSnQji9EW7">See Map</Link>
           </div>
         </div>
       </div>
