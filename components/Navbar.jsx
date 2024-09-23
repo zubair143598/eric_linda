@@ -39,10 +39,10 @@ const Navbar = () => {
       navLink : "Home",
       id:"/"
     },
-    // {
-    //   navLink : "The Toulous",
-    //   id:"#toulous"
-    // },
+    {
+      navLink : "The Toulous",
+      id:"#toulous"
+    },
     {
       navLink : "Traditional Wedding",
       id:"#Traditional"

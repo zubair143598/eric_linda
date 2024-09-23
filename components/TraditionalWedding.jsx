@@ -31,7 +31,7 @@ const TraditionalWedding = () => {
           </div>
           <div className="  space-y-4 text-white text-center">
             <p className=" font-bold uppercase text-[18px]">Which is celebration on</p>
-            <h1 className=" text-[48px] font-serif font-300">
+            <h1 className="  text-[40px] lg:text-[48px] font-serif font-300">
               23rd of Nov 2024{" "}
             </h1>
             <p className="text-[18px] uppercase font-bold">

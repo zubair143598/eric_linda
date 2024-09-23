@@ -60,7 +60,7 @@ END:VCALENDAR`;
             <p className="font-bold uppercase text-[18px]">
               Which is celebration on
             </p>
-            <h1 className="text-[48px] font-serif font-300">23rd of Nov 2024</h1>
+            <h1 className="text-[40px] lg:text-[48px] font-serif font-300">23rd of Nov 2024</h1>
             <p className="text-[18px] uppercase font-bold">
               Starting at 2:00 <br />
               in the afternoon
@@ -113,7 +113,7 @@ END:VCALENDAR`;
             <p className="font-bold uppercase text-[18px]">
               Which is celebration on
             </p>
-            <h1 className="text-[48px] font-serif font-300">30th of Nov 2024</h1>
+            <h1 className="text-[40px] lg:text-[48px] font-serif font-300">30th of Nov 2024</h1>
             <p className="text-[18px] uppercase font-bold">
               Starting at 2:00 <br />
               in the afternoon
