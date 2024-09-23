@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Countdown from "react-countdown";
 
-const CountdownTimer = () => {
+const CountdownTimerTrad = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ const CountdownTimer = () => {
   }, []);
 
   // Set the target date for the countdown
-  const targetDate = new Date("2024-11-20T00:00:00");
+  const targetDate = new Date("2024-11-23T00:00:00");
 
   // Renderer for the countdown
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -21,7 +21,7 @@ const CountdownTimer = () => {
       // Render the countdown
       return (
         <div
-          className="countdown flex justify-center justify-items-center items-center lg:gap-x-10 gap-x-4 lg:text-[56px] text-[20px] font-[500] "
+          className="countdown flex justify-center justify-items-center items-center lg:gap-x-10 gap-x-4 lg:text-[30px] text-[20px] font-[500] "
         >
           <div className=" text-center">
             <h2>{days}</h2>
@@ -55,4 +55,4 @@ const CountdownTimer = () => {
   );
 };
 
-export default CountdownTimer;
+export default CountdownTimerTrad;

@@ -4,9 +4,11 @@ import React from "react";
 const ReligieuxWeeding = () => {
   return (
     <div id="Religieux" className="relative  py-8 lg:py-16">
-        
-        <h1 className=" text-center font-semibold font-GreatVibes text-[#3612ec] text-[50px] lg:text-[80px] ">Religieux Wedding</h1>
-      
+        <div className="relative z-10">
+    <h1 className="text-center font-GreatVibes text-white text-[50px] lg:text-[80px]">
+    Religieux Wedding
+    </h1>
+  </div>
       <div className="grid grid-cols-1 gap-x-5 gap-y-10  lg:grid-cols-2 mx-auto lg:w-[80%] w-[90%] ">
         <div className="flex Traditional py-3 justify-center ">
           <img className="w-[80%]" src="./assists/relegix.jpg" alt="" />
@@ -44,9 +46,7 @@ const ReligieuxWeeding = () => {
              in Yaounde, Cameroon
             </h5>
           </div>
-          <div>
-            <Link className="text-[18px] hover:text-black hover:bg-white uppercase font-bold text-white px-6 py-3 border" target="blank" href="https://maps.app.goo.gl/adTCHmSdSnQji9EW7">See Map</Link>
-          </div>
+          
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import React from "react";
 const Photos = () => {
     
   return (
-    <div className=" py-8 lg:py-16 photo">
+    <div id="Photos" className=" py-8 lg:py-16 photo">
       <div>
         <h2 className=" text-center text-[40px] text-[#f67e7d] font-bold lg:text-[90px]  font-GreatVibes">
           Gallery

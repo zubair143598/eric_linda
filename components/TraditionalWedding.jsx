@@ -1,12 +1,11 @@
-import Link from "next/link";
 import React from "react";
 
 
 const TraditionalWedding = () => {
   return (
     <div id="Traditional" className=" py-16 ">
-      <div>
-        <h1 className=" text-center font-GreatVibes text-[#ffffff] text-[50px] lg:text-[80px] ">Traditional Wedding</h1>
+      <div className=" relative z-10">
+        <h1 className=" text-center font-GreatVibes text-white text-[50px] lg:text-[80px] ">Traditional Wedding</h1>
       </div>
       {/* <img className='w-[100%] lg:-mt-[8rem]' src="./assists/flowerUpper.jpg" alt="" /> */}
       <div className="grid  grid-cols-1 gap-y-10 lg:grid-cols-2 mx-auto lg:w-[80%] w-[90%] Traditional">
@@ -46,9 +45,7 @@ const TraditionalWedding = () => {
               in Fondjomekwet, Cameroon
             </h5>
           </div>
-          <div>
-            <Link className="text-[18px] hover:text-black hover:bg-white uppercase font-bold text-white px-6 py-3 border" target="blank" href="https://maps.app.goo.gl/adTCHmSdSnQji9EW7">See Map</Link>
-          </div>
+          
         </div>
       </div>
     </div>

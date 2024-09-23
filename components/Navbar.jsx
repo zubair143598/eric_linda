@@ -38,21 +38,22 @@ const Navbar = () => {
     {
       navLink : "Home",
       id:"/"
-    },{
-      navLink : "The Toulous",
-      id:"#toulous"
     },
+    // {
+    //   navLink : "The Toulous",
+    //   id:"#toulous"
+    // },
     {
       navLink : "Traditional Wedding",
       id:"#Traditional"
     },
     {
       navLink : "Marriage Religieux",
-      id:"/"
+      id:"#Religieux"
     },
     {
-      navLink : "Accommodations",
-      id:"/"
+      navLink : "Save Date",
+      id:"#SaveDate"
     },
     {
       navLink : "RSVP",
@@ -60,10 +61,10 @@ const Navbar = () => {
     },
     {
       navLink : "Photos",
-      id:"/"
+      id:"#Photos"
     }
   ]
-  // const navItems = ['Home', 'The Toulous', 'Traditional Wedding','Mariage Religieux ','Accomodations','RSVP','Photos '];
+ 
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -81,7 +82,9 @@ const Navbar = () => {
         {navItems.map((item,index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
+              <Link href={item.id}>
               <ListItemText primary={item.navLink} />
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
