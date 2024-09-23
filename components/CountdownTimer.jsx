@@ -10,7 +10,7 @@ const CountdownTimer = () => {
   }, []);
 
   // Set the target date for the countdown
-  const targetDate = new Date("2024-12-22T00:00:00");
+  const targetDate = new Date("2024-11-30T00:00:00");
 
   // Renderer for the countdown
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -24,7 +24,7 @@ const CountdownTimer = () => {
           className="countdown flex justify-center justify-items-center items-center lg:gap-x-10 gap-x-4 lg:text-[56px] text-[20px] font-[500] "
         >
           <div className=" text-center">
-            <h2>- {days}</h2>
+            <h2>{days}</h2>
             <p>Days</p>
           </div>
           <div className=" text-center">

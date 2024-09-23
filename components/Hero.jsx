@@ -3,7 +3,7 @@ import CountdownTimer from './CountdownTimer';
 
 const Hero = () => {
   return (
-    <div className='relative z-10 flex flex-col bg-transparent text-white justify-center items-center'>
+    <div className='relative pt-10 z-10 flex flex-col bg-transparent text-white justify-center items-center'>
       <div className='pt-6 lg:pt-0'>
         <img className='lg:w-[200px] w-[150px]' src="./assists/vinesRoseWhite.png" alt="" />
       </div>

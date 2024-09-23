@@ -13,13 +13,13 @@ const Rsvp = () => {
   };
 
   return (
-    <div id="rvsp" className=" bg-[#DCF4E6] py-12">
+    <div id="rvsp" className="  bg-[#DCF4E6] py-12">
       <div className=" flex flex-col justify-center items-center">
         <h1 className="lg:text-[90px] text-[50px] text-[#f67e7d] font-GreatVibes">
           Are you attending
         </h1>
       </div>
-      <div className="mx-auto py-16 rounded bg-white lg:w-[40%] w-[90%]">
+      <div className="mx-auto border border-black   py-16 rounded bg-white lg:w-[40%] w-[90%]">
         <form className="flex items-center flex-col gap-y-4" action="">
           <input
             type="text"
@@ -51,9 +51,9 @@ const Rsvp = () => {
               </FormControl>
             </Box>
           </div>
-          <textarea className=" placeholder:px-6 border-gray-400 border w-[80%] h-12" name="Message" placeholder="Messge" id=""></textarea>
+          <textarea className=" placeholder:px-6 border-gray-400 border w-[80%] h-12" name="Message" placeholder="Message" id=""></textarea>
 
-          <button className=" mt-5 bg-[#f67e7d] rounded-full text-white font-bold px-10 py-4" type="submit">I am Attending</button>
+          <button className="transform hover:rotate-6 mt-5 bg-[#f67e7d] rounded-full text-white font-bold px-10 py-4" type="submit">I am Attending</button>
           
         </form>
       </div>

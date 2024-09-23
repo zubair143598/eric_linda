@@ -13,6 +13,54 @@ body {
     font-family: 'Great Vibes', cursive;
   }
 
+  .Main {
+    background-image: url("../public/assists/mainBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
   
+  .Main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Ensure the overlay is on top of the background */
+  }
 
+  .Traditional {
+    position: relative;
+   
+    
+    z-index: 1; /* Ensure the main content is above the pseudo-elements */
+  }
   
+  /* Left border rotation */
+  .Traditional::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: solid 0.1px gray; /* Border color and width */
+    transform: rotate(-1deg); /* Rotate the border to the left */
+    z-index: -1; /* Put the rotated border behind the content */
+  }
+  
+  /* Right border rotation */
+  .Traditional::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: solid 0.1px gray; /* Border color and width */
+    transform: rotate(1deg); /* Rotate the border to the right */
+    z-index: -2; /* Ensure this is behind the first rotated border */
+  }
