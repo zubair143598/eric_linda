@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Photos from "@/components/Photos";
 import ReligieuxWeeding from "@/components/ReligieuxWeeding";
 import Rsvp from "@/components/Rsvp";
 import Toulous from "@/components/Toulous";
@@ -15,7 +16,8 @@ export default function Home() {
       <TraditionalWedding />
       <ReligieuxWeeding/>
       <Rsvp />
-      <Toulous />
+      <Photos/>
+      {/* <Toulous /> */}
     </>
   );
 }

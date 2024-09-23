@@ -2,8 +2,9 @@ import React from 'react'
 
 const TraditionalWedding = () => {
   return (
-    <div id='Traditional' className='my-6'>
-      <div className='grid grid-cols-1 gap-y-10 lg:grid-cols-2 mx-auto lg:w-[80%] w-[90%] Traditional'>
+    <div id='Traditional' className=' py-16 '>
+      {/* <img className='w-[100%] lg:-mt-[8rem]' src="./assists/flowerUpper.jpg" alt="" /> */}
+      <div className='grid  grid-cols-1 gap-y-10 lg:grid-cols-2 mx-auto lg:w-[80%] w-[90%] Traditional'>
         <div className='flex justify-center py-3'>
           <img className='w-[80%]' src="./assists/Traditional.jpg" alt="" />
         </div>
@@ -30,6 +31,7 @@ const TraditionalWedding = () => {
             in Fondjomekwet, Cameroon</h5>
           </div>
         </div>
+        
       </div>
     </div>
   )
